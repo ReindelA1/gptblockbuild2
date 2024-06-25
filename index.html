@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Block Builder</h1>
+    <div id="gameArea">
+        <div id="sidebar">
+            <div id="colorPicker">
+                <input type="color" id="colorSelector" value="#0000FF">
+            </div>
+            <div class="block" data-type="circle" draggable="true">Circle</div>
+            <div class="block" data-type="triangle" draggable="true">Triangle</div>
+            <div class="block" data-type="pentagon" draggable="true">Pentagon</div>
+            <div class="block" data-type="hexagon" draggable="true">Hexagon</div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+    </div>
+    <div id="controls">
+        <button id="resetBtn">Reset</button>
+        <button id="undoBtn">Undo</button>
+        <button id="redoBtn">Redo</button>
+        <button id="saveBtn">Save</button>
+        <button id="loadBtn">Load</button>
+        <button id="shareBtn">Share</button>
+        <button id="presetBtn">Load Preset</button>
+        <label for="gridSize">Grid Size:</label>
+        <input type="number" id="gridSize" value="20" min="10" max="50">
+        <label for="snapToggle">Snap to Grid:</label>
+        <input type="checkbox" id="snapToggle" checked>
+        <label for="rotation">Rotate:</label>
+        <input type="number" id="rotation" value="0" min="0" max="360" step="90">
+        <p id="status">Status: Ready</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
